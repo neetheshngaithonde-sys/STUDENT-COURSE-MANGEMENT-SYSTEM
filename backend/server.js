@@ -1,12 +1,24 @@
+// Load environment variables
+require("dotenv").config();
+
 const express = require("express");
 
 const logger = require("./middleware/logger");
 const errorHandler = require("./middleware/errorHandler");
 const studentRoutes = require("./routes/studentRoutes");
+const connectDB = require("./config/db");
 
 const app = express();
 
-const PORT = 5000;
+// Port from .env
+const PORT = process.env.PORT || 5000;
+
+
+// ================================
+// Connect to Database
+// ================================
+
+connectDB();
 
 
 // ================================

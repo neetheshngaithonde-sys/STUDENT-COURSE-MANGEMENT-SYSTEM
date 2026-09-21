@@ -1,34 +1,21 @@
 const express = require("express");
-
 const router = express.Router();
 
 const {
     getStudents,
     getStudentById,
-    createStudent,
     updateStudent,
     deleteStudent
-} = require("../controllers/courseController");
+} = require("../controllers/studentController");
 
+const { protect, authorize } = require("../middleware/authMiddleware");
 
-// ================================
-// Student Routes
-// ================================
+// Admin routes
+router.get("/", protect, authorize("admin"), getStudents);
+router.delete("/:id", protect, authorize("admin"), deleteStudent);
 
-// GET all students
-router.get("/", getStudents);
-
-// GET student by ID
-router.get("/:id", getStudentById);
-
-// POST student
-router.post("/", createStudent);
-
-// PUT student
-router.put("/:id", updateStudent);
-
-// DELETE student
-router.delete("/:id", deleteStudent);
-
+// Student self or Admin routes
+router.get("/:id", protect, getStudentById);
+router.put("/:id", protect, updateStudent);
 
 module.exports = router;

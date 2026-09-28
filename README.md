@@ -1,9 +1,9 @@
-# EduPulse - Student Course Management System
+# LearnPulse - Student Course Management System
 
 > **Comprehensive 10-Week Engineering Project Progression**  
 > **Current Milestone**: Weeks 1 through 7 Completed & Modernized UI/UX
 
-EduPulse is a full-stack academic web platform designed to streamline course discovery, student registrations, enrollment tracking, and administrative curriculum governance. Built with modern Node.js, Express.js, MongoDB (Mongoose ODM), Bcrypt authentication, JWT security, and a responsive glassmorphic frontend.
+LearnPulse is a full-stack academic web platform designed to streamline course discovery, student registrations, enrollment tracking, and administrative curriculum governance. Built with modern Node.js, Express.js, MongoDB (Mongoose ODM), Bcrypt authentication, JWT security, and a responsive glassmorphic frontend.
 
 ---
 
